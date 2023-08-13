@@ -1,12 +1,11 @@
-
-from fastapi import FastAPI
-from fastapi.encoders import jsonable_encoder
-from pydantic import BaseModel
 import joblib
 import os
 import pandas as pd
 from loguru import logger
- 
+from fastapi import FastAPI
+from fastapi.encoders import jsonable_encoder
+from pydantic import BaseModel
+
 # Creating FastAPI instance
 app = FastAPI()
  
@@ -46,4 +45,4 @@ def predict(data : HouseInfo):
     )[0]
      
     # Return the result
-    return { 'price' : price}
+    return {'price' : price}
