@@ -22,6 +22,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+                input "Approve?"
                 // A box will be displayed to show whether to proceed 
                 // with the deployment
                 // input 'Do you approve deployment?'
